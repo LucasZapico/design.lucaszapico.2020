@@ -1,0 +1,29 @@
+@media screen and (min-width: 100px) {
+  .card {
+    background-color: $color-sec;
+    border-radius: 15px;
+    display: block;
+
+
+    &.post {
+      height: 400px;
+      overflow: hidden;
+    }
+
+    // has image 
+    // only image 
+    // only text
+  }
+
+
+}
+
+// 700px and up
+@media screen and (min-width: $media-small) {}
+
+// 960px 
+@media screen and (min-width: $media-med) {}
+
+@media screen and (min-width: $media-large) {}
+
+@media screen and (min-width: $media-xlarge) {}
