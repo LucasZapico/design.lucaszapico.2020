@@ -1,28 +1,42 @@
 .feed {
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 
-    &>div {
-      min-height: 200px;
-      min-width: 200px;
-      margin: 1rem;
-    }
+  &>div {
+    min-height: 200px;
+    min-width: 200px;
+    margin: 1rem;
   }
+}
+
+.post.card {
+  margin: $space-atom * $sm;
+  overflow: hidden;
 }
 
 .post {
   &__content {
     padding: $space-atom * $md;
   }
+
+  &.img {
+    .post {
+      &__content {
+        height: 0px;
+      }
+    }
+  }
 }
+
+
 
 // 100px and up
 @media screen and (min-width: 100px) {
   .feed {
-    &__container {}
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
   }
+
 }
 
 // 700px and up
@@ -30,8 +44,21 @@
 
 // 960px
 @media screen and (min-width: $media-med) {
+  .feed {
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+
   .post-img {
     grid-column: 1/span 2;
+  }
+
+  &.post {
+    height: 400px;
+    overflow: hidden;
   }
 
   .post {

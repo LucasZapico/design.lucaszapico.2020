@@ -25,16 +25,18 @@ const Post = ({ post, progress }) => {
           />
         </div>
       )}
-      <div className="post__content">
-        <div className="post__header">
-          <h4 className="post__title">{post.frontmatter.title}</h4>
+      {post.frontmatter.type === 'post-img' ? (
+        <div className="post__content">
+          <div className="post__header">
+            <h4 className="post__title">{post.frontmatter.title}</h4>
+          </div>
+          <div className="post__body">
+            <h6 className="post__title">
+              {post.frontmatter.description}
+            </h6>
+          </div>
         </div>
-        <div className="post__body">
-          <h6 className="post__title">
-            {post.frontmatter.description}
-          </h6>
-        </div>
-      </div>
+      ) : undefined}
     </div>
   )
 }
@@ -53,7 +55,7 @@ const HomePage = ({ data }) => {
           </div>
         </header>
         <div className="content home">
-          <section className="section projects">
+          <section className="section">
             <div className="feed__header">
               <div className="content__container">
                 <h2 className="h3 margin__left--m">Feed</h2>
