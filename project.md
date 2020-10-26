@@ -7,10 +7,15 @@
   - [ ] minified css and js
 - [ ] removed unused packages, components, css etc
 - [ ] feed sort by category
-- [ ] skip to month or timeline on right handside
+- [ ] skip to month or timeline on right hand side
 - [x] privacy policy
 - [ ] developer/admin contact
+- [ ] click to enlarge image
+- [ ] post view?
+- [ ] feed tool time ? "what is this"
+- [ ] scroll to top
 - [] seo
+- [ ] work with me flow
 
 ---
 
