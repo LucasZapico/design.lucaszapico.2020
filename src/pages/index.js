@@ -50,7 +50,10 @@ const HomePage = ({ data }) => {
         <header className="home header">
           <div className="hero">
             <div className="hero__content content__container margin__left--m">
-              <h1 className="h3">A Feed of Design,</h1>
+              <h1 className="h3">
+                A Feed of Design,....because it needed
+                somewhere&nbsp;to&nbsp;go
+              </h1>
             </div>
           </div>
         </header>
@@ -58,7 +61,7 @@ const HomePage = ({ data }) => {
           <section className="section">
             <div className="feed__header">
               <div className="content__container">
-                <h2 className="h3 margin__left--m">Feed</h2>
+                {/* <h2 className="h3 margin__left--m">Feed</h2> */}
                 <div className="feed__container">
                   {edges.map(edge => (
                     <Post key={edge.node.id} post={edge.node} />
