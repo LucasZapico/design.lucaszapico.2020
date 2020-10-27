@@ -2,8 +2,8 @@
 title: 'Make Gifs in Figma'
 description: "Order lady was the character for Mark'ie v1"
 date-created: '2020/03/11'
-last-modified: 2020/10/25
-isdraft: false
+last-modified: 2020/10/26
+isdraft: true
 featured_img: '../assets/images/order-lady.png'
 categories: ['illurstration']
 tags: []

@@ -1,3 +1,9 @@
+.hero {
+  &__content {
+    color: $color-tri;
+  }
+}
+
 .post {
   &.card {
     margin: $space-atom * $sm;
@@ -41,7 +47,7 @@
   }
 
   .post {
-    height: 400px;
+    max-height: 400px;
     overflow: hidden;
 
     &.post-img {
