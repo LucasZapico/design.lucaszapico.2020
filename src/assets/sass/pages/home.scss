@@ -47,7 +47,8 @@
   }
 
   .post {
-    max-height: 400px;
+    height: 400px;
+
     overflow: hidden;
 
     &.post-img {
@@ -67,17 +68,22 @@
 
       .post {
         &__img {
+
           flex-basis: 100%;
         }
       }
     }
 
     &.img {
-      width: 45%;
-      flex-basis: 45%;
+      // width: 45%;
+      // flex-basis: 45%;
 
       .post {
         &__img {
+          img {
+            width: 100%
+          }
+
           flex-basis: 100%;
         }
       }
@@ -161,8 +167,8 @@
     }
 
     &.post-img {
-      width: 48%;
-      flex-basis: 48%;
+      width: 45%;
+      flex-basis: 45%;
       display: flex;
 
       .post {
