@@ -43,12 +43,18 @@
     &__container {
       flex-direction: row;
       flex-wrap: wrap;
+
+      &>.post-img {
+        flex-grow: 1;
+        flex-shrink: 1;
+      }
     }
   }
 
   .post {
-    height: 400px;
-
+    max-height: 400px;
+    min-width: 40%;
+    flex-basis: 40%;
     overflow: hidden;
 
     &.post-img {
@@ -68,7 +74,7 @@
 
       .post {
         &__img {
-
+          width: 100%;
           flex-basis: 100%;
         }
       }

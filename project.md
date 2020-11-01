@@ -2,7 +2,7 @@
 
 ## Checklist
 
-- [] open graph image
+- [ ] open graph image
 - [ ] optimized for production
   - [ ] minified css and js
 - [ ] removed unused packages, components, css etc
@@ -16,9 +16,12 @@
 - [ ] scroll to top
 - [] seo
 - [ ] work with me flow
+- [ ] enhance the content experience
 
 ---
 
 design
 development
 distractions
+
+---

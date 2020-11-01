@@ -43,6 +43,7 @@ const Post = ({ post, progress }) => {
 
 const HomePage = ({ data }) => {
   const edges = data.posts.edges
+
   return (
     <Layout>
       <SEO title="home" />
