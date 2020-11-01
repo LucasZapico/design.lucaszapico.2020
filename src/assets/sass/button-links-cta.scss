@@ -1,160 +1,147 @@
 button {
-    font-family: $base-family;
-    cursor: pointer;
-  }
-  
-  a {
-    font-family: $base-family;
-    color: $color-grey-8;
-    cursor: pointer;
-  
-  }
-  
-  .btn {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 10px;
-    border: solid $color-sec 1px;
-    transition: all ease-in-out 0.2s;
-    border: 1px solid $pri-type-color;
-    max-width: 150px;
-  
-    //  todo: add awesome hover and active
-    &__primary {
-      &--invert {
-        background-color: $color-pri;
-      }
+  font-family: $base-family;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: all ease-in-out 0.2s;
+}
+
+a {
+  font-family: $base-family;
+  color: $color-grey-8;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.btn {
+  padding-top: $space-atom * $sm;
+  padding-bottom: $space-atom * $xs;
+  padding-left: $space-atom;
+  padding-right: $space-atom;
+  border-radius: 10px;
+  transition: all ease-in-out 0.2s;
+
+  &__pri {
+    &--light {
+
+
+      &:hover,
+      &:focus {}
     }
-  
-    &__secondary {
-      &--invert {}
+
+    &--dark {
+
+      &:hover,
+      &:focus {}
     }
-  
-    &:hover,
-    &:focus {
+  }
+
+  &__sec {
+    &--light {
       background-color: $color-pri;
-      color: $color-sec;
-    }
-  
-    &:active {
-      background-color: $color-pri;
-      color: $color-sec;
-    }
-  }
-  
-  a {
-    transition: all ease-in-out 0.2s;
-    color: $pri-type-color;
-  
-    &:hover,
-    &:focus {
-      color: $color-pri;
-    }
-  
-    &:active {
-      color: $color-pri;
-    }
-  }
-  
-  a,
-  button,
-  .btn {
-    &>svg {
-      transition: all ease-in-out 0.2s;
-      font-size: 1.5rem;
-      margin-bottom: -5px;
-    }
-  }
-  
-  .icon {
-    &--arrow {
-  
+
       &:hover,
       &:focus {
-        &>svg {
-          margin-left: 3px;
-          transform: scaleX(1.3);
-        }
+        background-color: $color-pri;
+        color: $color-sec;
       }
-  
-      &:active {
-        &>svg {
-          margin-left: 3px;
-          transform: scaleX(1.3);
-        }
+    }
+
+    &--dark {
+
+      &:hover,
+      &:focus {
+        background-color: $color-pri;
+        color: $color-sec;
       }
     }
   }
-  
-  
-  .cta,
-  .link {
-    &__icon {
-      &--light {
-        svg {
-          margin-left: .2rem;
-          font-size: 1.5rem;
-  
-        }
-      }
-  
-      &--dark {
-        svg {
-          margin-left: .2rem;
-          font-size: 1.5rem;
-          fill: $color-sec;
-        }
-  
-      }
-  
+}
+
+a {
+  transition: all ease-in-out 0.2s;
+  color: $pri-type-color;
+
+  &:hover,
+  &:focus {
+    svg {
+      transform: translateX(5px);
     }
-  
-    &__primary {
-      &--light {
-  
-        &:hover {}
-  
-        &:focus {}
-  
-      }
-  
-      &--dark {
-        color: $color-grey-8;
+
+  }
+
+  &:active {
+    color: $color-pri;
+  }
+}
+
+.cta,
+.btn,
+.link {
+  &__icon {
+    svg {
+      transition: all ease-in-out 0.2s;
+      margin-left: .2rem;
+      font-size: 1.5rem;
+
+    }
+
+    &--light {
+      svg {}
+    }
+
+    &--dark {
+      svg {}
+
+    }
+
+  }
+
+  &__pri {
+    &--light {
+
+      &:hover {}
+
+      &:focus {}
+
+    }
+
+    &--dark {
+      color: $color-grey-8;
+      border: $color-grey-8 2px solid;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+
+      &:hover {
+        color: $color-pri;
+        background-color: $color-grey-8;
         border: $color-grey-8 2px solid;
         padding-left: 1rem;
         padding-right: 1rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
-  
-  
-        &:hover {
-          color: $color-pri;
-          background-color: $color-grey-8;
-          border: $color-grey-8 2px solid;
-          padding-left: 1rem;
-          padding-right: 1rem;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-    
-        }
-  
-        &:focus {}
+
       }
-    }
-  
-    &__secondary {
-      &--light {
-        &:hover {}
-  
-        &:focus {}
-      }
-  
-      &--dark {
-        &:hover {}
-  
-        &:focus {}
-      }
+
+      &:focus {}
     }
   }
+
+  &__sec {
+    &--light {
+      &:hover {}
+
+      &:focus {}
+    }
+
+    &--dark {
+      &:hover {}
+
+      &:focus {}
+    }
+  }
+}

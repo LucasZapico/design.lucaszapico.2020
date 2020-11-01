@@ -327,8 +327,8 @@ blockquote {
   code,
   strong,
   em,
-  .char-100 {
-    max-width: 1400px;
+  .char__readable {
+    @include char__readable(750px);
   }
 
   .char-80 {

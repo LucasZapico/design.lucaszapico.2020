@@ -23,7 +23,7 @@ const PrimaryMenu = () => (
           </li> */}
       </div>
     </ul>
-    <MarkLight className="pri-menu__mark" />
+    {/* <MarkLight className="pri-menu__mark" /> */}
   </div>
 )
 
