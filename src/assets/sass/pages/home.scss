@@ -53,7 +53,7 @@
 
   .post {
     max-height: 400px;
-    min-width: 40%;
+    // min-width: 40%;
     flex-basis: 40%;
     overflow: hidden;
 
@@ -199,4 +199,38 @@
   }
 }
 
-@media screen and (min-width: $media-xlarge) {}
+@media screen and (min-width: $media-xlarge) {
+  .post {
+    &.img {
+      flex-basis: 25%;
+
+      .post {
+        &__img {
+          flex-basis: 100%;
+
+          img {
+
+            margin: auto;
+          }
+        }
+      }
+    }
+
+    &.post-img {
+      width: 45%;
+      flex-basis: 45%;
+      display: flex;
+
+      .post {
+        &__img {
+          height: 100%;
+
+          &>div {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
