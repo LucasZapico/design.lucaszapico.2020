@@ -12,11 +12,11 @@ const AboutPage = ({ data }) => (
       <div className="">
         <h1 className="h3">About this project</h1>
         <p>
-          I tend to do a fair bit of design during any given project
-          and it was frustrating the design work was not working for
-          me in some capacity. This project is a first iteration with
-          the objective of showcasing and showing movement in the
-          design space.
+          I tend to do a fair bit of design during any given project.
+          It was frustrating that this effort was not working for me
+          in some capacity. This project is a first iteration with the
+          objective of showcasing and showing movement in the design
+          space.
         </p>
         <p>
           <strong>Why not Instagram, Dribble or Behance?</strong>
@@ -24,10 +24,10 @@ const AboutPage = ({ data }) => (
         <p>
           Each of these platforms has a culture and expectation
           associated with their content where as a website is a clean
-          slate. As I wanted this to be a catch all for a breath of
-          content in the design space I did not want to have to taking
-          into account the personality of the platform and whether
-          what I was posting meat with the audience expectation.
+          slate. As I wanted this to be a catch all for a breadth of
+          content in the design space, I did not want to have to take
+          into account the personality of the platform; and whether
+          what I was posting met with the audience expectations.
         </p>
         <h3 id="roadmap">Roadmap</h3>
         <ul>

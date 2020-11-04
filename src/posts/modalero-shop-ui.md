@@ -1,8 +1,8 @@
 ---
-title: 'Modalero shopping experince ui'
+title: 'Modalero shopping experience UI'
 description: ''
 date-created: 2020/10/25
-last-modified: 2020/10/25
+last-modified: '2020/11/04'
 isdraft: false
 featured_img: '../assets/images/modalero-shop.png'
 categories: ['ui-design']

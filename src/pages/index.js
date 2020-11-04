@@ -51,10 +51,7 @@ const HomePage = ({ data }) => {
         <header className="home header">
           <div className="hero">
             <div className="hero__content content__container margin__left--m">
-              <h1 className="h3">
-                A Feed of Design,....because it needed
-                somewhere&nbsp;to&nbsp;go
-              </h1>
+              <h1 className="h3">A Feed of Design</h1>
             </div>
           </div>
         </header>
