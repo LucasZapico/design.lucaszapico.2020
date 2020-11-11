@@ -35,6 +35,10 @@ const AboutPage = ({ data }) => (
             click to lightbox view of any given image -- (multiple
             images??)
           </li>
+          <li>
+            support for articles (UX and other maybe drop in design
+            tools)
+          </li>
           <li>sort feature</li>
           <li>enhance with animations</li>
           <li>add related content ux</li>

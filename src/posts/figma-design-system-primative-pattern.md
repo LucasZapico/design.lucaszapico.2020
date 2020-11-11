@@ -2,9 +2,9 @@
 title: 'Figma Design System Primative Pattern Study'
 description: ''
 date-created: 2020/11/02
-last-modified: '2020/11/04'
+last-modified: '2020/11/11'
 isdraft: true
-featured_img: '
+featured_img: ''
 categories: ['design-system']
 tags: []
 type: 'post'
