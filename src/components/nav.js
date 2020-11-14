@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Mark from '../assets/images/mark.svg'
 import MarkLight from '../assets/images/mark-light.svg'
 import { IoIosMenu, IoIosClose } from 'react-icons/io'
+import { useThemeValue } from '../context/index'
 import { Link } from 'gatsby'
 
 const PrimaryMenu = () => (
@@ -32,6 +33,8 @@ const PrimaryNav = () => {
   const width = 900
   const [showMenu, setShowMenu] = useState(false)
   const [playSt, setPlaySt] = useState('stop')
+  const { theme, setTheme } = useThemeValue()
+  console.log('theme', theme)
 
   return (
     <>
@@ -48,6 +51,12 @@ const PrimaryNav = () => {
             </Link>
           ) : undefined}
           <>
+            <div
+              className="theme"
+              onClick={() => setTheme({ isDark: !theme.isDark })}
+            >
+              Theme
+            </div>
             <div className="sidenav__toggle">
               {!showMenu ? (
                 <IoIosMenu

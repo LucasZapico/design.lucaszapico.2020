@@ -1,7 +1,13 @@
+.container {
+  &.dark {}
+
+  &.light {}
+}
+
+
 .nav {
   z-index: 3;
   position: fixed;
-  background-color: $bg-pri;
   top: 0px;
   display: flex;
   justify-content: space-between;
@@ -22,8 +28,6 @@
       margin: 0px;
     }
   }
-
-  &__container {}
 
   .mark {
 
@@ -48,7 +52,7 @@
   top: 5rem;
   left: 0px;
   width: 100%;
-  background-color: $color-sec;
+
 
   ul {
     list-style: none;
@@ -59,10 +63,6 @@
       padding: 0px;
       margin: 0px;
     }
-  }
-
-  a {
-    color: $color-light;
   }
 }
 
