@@ -31,7 +31,7 @@ const StyleGuidePage = () => {
   }
 
   function rgbToHex(rgb) {
-    const hex = Number(rgb).toString(16)
+    let hex = Number(rgb).toString(16)
     if (hex.length < 2) {
       hex = '0' + hex
     }
@@ -143,6 +143,20 @@ const StyleGuidePage = () => {
                       occaecat ullamco ullamc
                     </h6>
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="section">
+            <h3 className="h4">Categories and Tags</h3>
+            <div className="container">
+              <div className="">Categories</div>
+              <div className="container flex justfiy__start">
+                <div className="tag  tag__category mr3">
+                  category-one,
+                </div>
+                <div className="tag   tag__category mr3">
+                  category-two
                 </div>
               </div>
             </div>

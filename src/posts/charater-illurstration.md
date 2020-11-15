@@ -1,11 +1,11 @@
 ---
-title: 'Rob Bailey Inspired Character Illustration'
+title: 'Character Illustration'
 description: "Playing with illustration inspired by Rob Bailey's style"
 date-created: 2020/10/25
-last-modified: 2020/10/25
+last-modified: '2020/11/15'
 isdraft: false
 featured_img: '../assets/images/charas-group.png'
-categories: ['illurstration']
+categories: ['illustration']
 tags: []
 type: 'post-img'
 ---

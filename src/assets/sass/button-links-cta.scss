@@ -9,7 +9,6 @@ button {
 
 a {
   font-family: $base-family;
-  color: $color-grey-8;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
 }
@@ -21,127 +20,128 @@ a {
   padding-right: $space-atom;
   border-radius: 10px;
   transition: all ease-in-out 0.2s;
-
-  &__pri {
-    &--light {
-
-
-      &:hover,
-      &:focus {}
-    }
-
-    &--dark {
-
-      &:hover,
-      &:focus {}
-    }
-  }
-
-  &__sec {
-    &--light {
-      background-color: $color-pri;
-
-      &:hover,
-      &:focus {
-        background-color: $color-pri;
-        color: $color-sec;
-      }
-    }
-
-    &--dark {
-
-      &:hover,
-      &:focus {
-        background-color: $color-pri;
-        color: $color-sec;
-      }
-    }
-  }
 }
 
 a {
   transition: all ease-in-out 0.2s;
-  color: $pri-type-color;
 
   &:hover,
   &:focus {
-    svg {
-      transform: translateX(5px);
-    }
-
-  }
-
-  &:active {
-    color: $color-pri;
+    color: $color-tri;
   }
 }
 
-.cta,
-.btn,
-.link {
-  &__icon {
-    svg {
-      transition: all ease-in-out 0.2s;
-      margin-left: .2rem;
-      font-size: 1.5rem;
+.container {
+  &.dark {
+    $color-pri: #423144;
+    $color-sec: #F4F4F5;
+    $color-tri: #aa8fad;
+    $color-quad: #2D242E;
 
-    }
+    a {
+      color: $color-sec;
 
-    &--light {
-      svg {}
-    }
+      .link {
+        color: $color-sec;
 
-    &--dark {
-      svg {}
-
-    }
-
-  }
-
-  &__pri {
-    &--light {
-
-      &:hover {}
-
-      &:focus {}
-
-    }
-
-    &--dark {
-      color: $color-grey-8;
-      border: $color-grey-8 2px solid;
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-
-
-      &:hover {
-        color: $color-pri;
-        background-color: $color-grey-8;
-        border: $color-grey-8 2px solid;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-
+        &:hover,
+        &:focus {
+          color: $color-tri;
+        }
       }
 
-      &:focus {}
+      &>* {
+        color: $color-sec;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-tri;
+      }
     }
   }
 
-  &__sec {
-    &--light {
-      &:hover {}
+  &.light {
+    $color-pri: #F4F4F5;
+    $color-sec: #2D242E;
+    $color-tri: #aa8fad;
+    $color-quad: #dfdfe2;
 
-      &:focus {}
+    a {
+      color: $color-sec;
+
+      &:hover,
+      &:focus {
+        color: $color-tri;
+      }
+
+      .link {
+        color: $color-sec;
+
+        &:hover,
+        &:focus {
+          color: $color-tri;
+        }
+      }
+
+
+      &>* {
+        color: $color-sec;
+
+        &:hover,
+        &:focus {
+          color: $color-tri;
+        }
+      }
+    }
+  }
+}
+
+/***
+** Toggle 
+***/
+
+.toggle {
+  &.theme {
+    width: 80px;
+    height: 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &>div {
+      transition: all ease-in-out .3s;
+      position: absolute;
+      top: 0px;
+      height: 20px;
+      width: 20px;
     }
 
-    &--dark {
-      &:hover {}
+    &.dark {
 
-      &:focus {}
+      border: solid 1px #F4F4F5;
+
+      &>div:first-of-type {
+        left: 0px;
+        background-color: #F4F4F5;
+      }
+
+      &>div:last-of-type {
+        left: 30px;
+      }
+    }
+
+    &.light {
+      border: solid 1px #423144;
+
+      &>div:first-of-type {
+        left: 60px;
+        background-color: #423144;
+      }
+
+      &>div:last-of-type {
+        left: 10px;
+      }
     }
   }
 }

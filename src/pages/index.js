@@ -4,42 +4,7 @@ import Img from 'gatsby-image'
 import { Link, graphql } from 'gatsby'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import SEO from '../components/seo'
-
-const Post = ({ post, progress }) => {
-  console.log('test', post.frontmatter.title)
-  console.log('test', post.frontmatter.featured)
-  return (
-    <div className={`post card ${post.frontmatter.type}`}>
-      {post.frontmatter.featured_gif === null ? undefined : (
-        <div className="post__img">
-          <img src={post.frontmatter.featured_gif} alt="mark gif" />
-        </div>
-      )}
-      {post.frontmatter.featured_img === null ? undefined : (
-        <div className="post__img">
-          <Img
-            fluid={
-              post.frontmatter.featured_img.childImageSharp.fluid
-            }
-            objectFit="contain"
-          />
-        </div>
-      )}
-      {post.frontmatter.type === 'post-img' ? (
-        <div className="post__content">
-          <div className="post__header">
-            <h4 className="post__title">{post.frontmatter.title}</h4>
-          </div>
-          <div className="post__body">
-            <h6 className="post__title">
-              {post.frontmatter.description}
-            </h6>
-          </div>
-        </div>
-      ) : undefined}
-    </div>
-  )
-}
+import Card from '../components/card'
 
 const HomePage = ({ data }) => {
   const edges = data.posts.edges
@@ -62,7 +27,7 @@ const HomePage = ({ data }) => {
                 {/* <h2 className="h3 margin__left--m">Feed</h2> */}
                 <div className="feed__container">
                   {edges.map(edge => (
-                    <Post key={edge.node.id} post={edge.node} />
+                    <Card key={edge.node.id} post={edge.node} />
                   ))}
                 </div>
               </div>

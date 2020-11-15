@@ -1,15 +1,34 @@
 @media screen and (min-width: 100px) {
-  .card {
-    background-color: $color-sec;
-    border-radius: 15px;
-    display: block;
+  .container {
+    &.dark {
+      $color-pri: #423144;
+      $color-sec: #F4F4F5;
+      $color-tri: #aa8fad;
+      $color-quad: #2D242E;
 
-    // has image 
-    // only image 
-    // only text
+      .card {
+        background-color: $color-quad;
+        color: $color-sec;
+      }
+    }
+
+    &.light {
+      $color-pri: #F4F4F5;
+      $color-sec: #2D242E;
+      $color-tri: #dfdfe2;
+      $color-quad: #dfdfe2;
+
+      .card {
+        background-color: $color-quad;
+        color: $color-sec;
+      }
+    }
   }
 
-
+  .card {
+    border-radius: 15px;
+    display: block;
+  }
 }
 
 // 700px and up

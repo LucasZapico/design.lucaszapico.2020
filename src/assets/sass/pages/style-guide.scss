@@ -101,7 +101,21 @@
         background-color: $color-dark;
       }
     }
+  }
 
+  .tag {
+    &__category {
+      background-color: $color-grey-4;
+      color: $color-pri;
+      margin-left: $space-atom * $xs;
+      margin-top: $space-atom * $xs;
+      margin-bottom: $space-atom * $xs;
+      padding-left: $space-atom * $xs;
+      padding-top: $space-atom * $xs;
+      padding-right: $space-atom * $xs;
+      padding-bottom: $space-atom * $xs;
+      border-radius: 10px;
+    }
   }
 
 }
