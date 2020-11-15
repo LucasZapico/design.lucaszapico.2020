@@ -1,16 +1,16 @@
 html,
 body,
 .app {
-    font-family: $base-family;
+  font-family: $base-family;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 main {
-    min-height: 90vh;
-    padding-top: 100px;
+  min-height: 90vh;
+  padding-top: 100px;
 }
 
 /***
@@ -18,73 +18,141 @@ main {
 ***/
 
 .container {
-    &.dark {
-        $color-pri: #423144;
-        $color-sec: #F4F4F5;
-        $color-tri: #aa8fad;
-        $color-quad: #2D242E;
-        background-color: $color-pri;
-        color: $color-sec;
+  &.dark {
+    $color-pri: #423144;
+    $color-sec: #F4F4F5;
+    $color-tri: #aa8fad;
+    $color-quad: #2D242E;
+    background-color: $color-pri;
+    color: $color-sec;
 
-        .nav {
-            background-color: $color-pri;
-            color: $color-sec;
-        }
-
-        .pri-menu {
-            background-color: $color-pri;
-            color: $color-sec;
-        }
+    .nav {
+      background-color: $color-pri;
+      color: $color-sec;
     }
 
-    &.light {
-        $color-pri: #F4F4F5;
-        $color-sec: #2D242E;
-        $color-tri: #dfdfe2;
-        $color-quad: #dfdfe2;
-        background-color: $color-pri;
-        color: $color-sec;
+    .pri-menu {
+      background-color: $color-pri;
+      color: $color-sec;
+    }
+  }
 
-        .nav {
-            background-color: $color-pri;
-            color: $color-sec;
-        }
+  &.light {
+    $color-pri: #FFFFFF;
+    $color-sec: #2D242E;
+    $color-tri: #EBEBEC;
+    $color-quad: #dfdfe2;
+    background-color: $color-pri;
+    color: $color-sec;
 
-        .pri-menu {
-            background-color: $color-pri;
-            color: $color-sec;
-        }
+    .nav {
+      background-color: $color-pri;
+      color: $color-sec;
     }
 
-
+    .pri-menu {
+      background-color: $color-pri;
+      color: $color-sec;
+    }
+  }
 }
+
+/***
+** Layout 
+***/
+
+/***
+** flexbox
+***/
+
+.flex {
+  display: flex;
+
+  &__wrap {
+    flex-wrap: wrap;
+  }
+
+  &__nowrap {
+    flex-wrap: nowrap;
+  }
+}
+
+.items {
+  &__start {
+    align-items: flex-start;
+  }
+
+  &__end {
+    align-items: flex-end;
+  }
+
+  &__center {
+    align-items: center;
+  }
+}
+
+.justify {
+  &__start {
+    justify-content: flex-start;
+  }
+
+  &__end {
+    justify-content: flex-end;
+  }
+
+  &__center {
+    justify-content: center;
+  }
+
+  &__between {
+    justify-content: space-between;
+  }
+
+  &__around {
+    justify-content: space-around;
+  }
+}
+
+
 
 /***
 ** Section 
 ***/
 
 .section {
-    padding-top: $space-atom * $space-lg;
-    padding-bottom: $space-atom * $space-lg;
+  padding-top: $space-atom * $space-lg;
+  padding-bottom: $space-atom * $space-lg;
 }
 
 
-@media screen and (min-width: 100px) {}
+@media screen and (min-width: 100px) {
+  * {
+    .ns {
+      display: none;
+    }
+  }
+}
 
 // 700px and up
-@media screen and (min-width: $media-small) {}
+@media screen and (min-width: $media-small) {
+  * {
+    .ns {
+      display: block;
+    }
+  }
+}
 
 // 960px 
 @media screen and (min-width: $media-med) {}
 
 @media screen and (min-width: $media-large) {
-    .container {
-        &__content {
-            width: 100%;
-            max-width: 1200px;
-            margin: auto;
-        }
+  .container {
+    &__content {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
     }
+  }
 }
 
 @media screen and (min-width: $media-xlarge) {}

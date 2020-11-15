@@ -147,6 +147,20 @@ const StyleGuidePage = () => {
               </div>
             </div>
           </section>
+          <section className="section">
+            <h3 className="h4">Categories and Tags</h3>
+            <div className="container">
+              <div className="">Categories</div>
+              <div className="container flex justfiy__start">
+                <div className="tag  tag__category mr3">
+                  category-one,
+                </div>
+                <div className="tag   tag__category mr3">
+                  category-two
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </Layout>

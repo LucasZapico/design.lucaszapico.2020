@@ -25,42 +25,9 @@ a {
 a {
   transition: all ease-in-out 0.2s;
 
-
   &:hover,
   &:focus {
-    svg {
-      transform: translateX(5px);
-    }
-  }
-}
-
-.cta,
-.btn,
-.link {
-  &__icon {
-    svg {
-      transition: all ease-in-out 0.2s;
-      margin-left: .2rem;
-      font-size: 1.5rem;
-
-    }
-  }
-
-  &__pri {
-    &--dark {
-      padding-left: 1rem;
-      padding-right: 1rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-
-      &:hover {
-        padding-left: 1rem;
-        padding-right: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-
-      }
-    }
+    color: $color-tri;
   }
 }
 
@@ -72,12 +39,24 @@ a {
     $color-quad: #2D242E;
 
     a {
+      color: $color-sec;
+
       .link {
         color: $color-sec;
+
+        &:hover,
+        &:focus {
+          color: $color-tri;
+        }
       }
 
       &>* {
         color: $color-sec;
+      }
+
+      &:hover,
+      &:focus {
+        color: $color-tri;
       }
     }
   }
@@ -85,19 +64,83 @@ a {
   &.light {
     $color-pri: #F4F4F5;
     $color-sec: #2D242E;
-    $color-tri: #dfdfe2;
+    $color-tri: #aa8fad;
     $color-quad: #dfdfe2;
 
     a {
       color: $color-sec;
 
+      &:hover,
+      &:focus {
+        color: $color-tri;
+      }
+
       .link {
         color: $color-sec;
+
+        &:hover,
+        &:focus {
+          color: $color-tri;
+        }
       }
 
 
       &>* {
         color: $color-sec;
+
+        &:hover,
+        &:focus {
+          color: $color-tri;
+        }
+      }
+    }
+  }
+}
+
+/***
+** Toggle 
+***/
+
+.toggle {
+  &.theme {
+    width: 80px;
+    height: 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+
+    &>div {
+      transition: all ease-in-out .3s;
+      position: absolute;
+      top: 0px;
+      height: 20px;
+      width: 20px;
+    }
+
+    &.dark {
+
+      border: solid 1px #F4F4F5;
+
+      &>div:first-of-type {
+        left: 0px;
+        background-color: #F4F4F5;
+      }
+
+      &>div:last-of-type {
+        left: 30px;
+      }
+    }
+
+    &.light {
+      border: solid 1px #423144;
+
+      &>div:first-of-type {
+        left: 60px;
+        background-color: #423144;
+      }
+
+      &>div:last-of-type {
+        left: 10px;
       }
     }
   }

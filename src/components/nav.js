@@ -4,6 +4,7 @@ import MarkLight from '../assets/images/mark-light.svg'
 import { IoIosMenu, IoIosClose } from 'react-icons/io'
 import { useThemeValue } from '../context/index'
 import { Link } from 'gatsby'
+import { useSpring, animated as a } from 'react-spring'
 
 const PrimaryMenu = () => (
   <div className="pri-menu">
@@ -34,7 +35,6 @@ const PrimaryNav = () => {
   const [showMenu, setShowMenu] = useState(false)
   const [playSt, setPlaySt] = useState('stop')
   const { theme, setTheme } = useThemeValue()
-  console.log('theme', theme)
 
   return (
     <>
@@ -47,30 +47,39 @@ const PrimaryNav = () => {
           </div>
           {width > 800 ? (
             <Link to="/">
-              <div className="nav__header h4">Deisgn.LucasZapico</div>
+              <div className="nav__header h4 ns">
+                Deisgn.LucasZapico
+              </div>
             </Link>
           ) : undefined}
           <>
-            <div
-              className="theme"
-              onClick={() => setTheme({ isDark: !theme.isDark })}
-            >
-              Theme
-            </div>
-            <div className="sidenav__toggle">
-              {!showMenu ? (
-                <IoIosMenu
-                  onClick={() => {
-                    setShowMenu(!showMenu)
-                  }}
-                />
-              ) : (
-                <IoIosClose
-                  onClick={() => {
-                    setShowMenu(!showMenu)
-                  }}
-                />
-              )}
+            <div className="nav__items flex items__center">
+              <div
+                className={
+                  theme.isDark
+                    ? `theme dark toggle`
+                    : `theme light toggle`
+                }
+                onClick={() => setTheme({ isDark: !theme.isDark })}
+              >
+                <div></div>
+                {theme.isDark ? <div>Dark</div> : <div>Light</div>}
+              </div>
+              <div className="sidenav__toggle margin__left">
+                {!showMenu ? (
+                  <IoIosMenu
+                    onClick={() => {
+                      setShowMenu(!showMenu)
+                    }}
+                  />
+                ) : (
+                  <IoIosClose
+                    onClick={() => {
+                      setShowMenu(!showMenu)
+                    }}
+                  />
+                )}
+              </div>
             </div>
           </>
         </nav>

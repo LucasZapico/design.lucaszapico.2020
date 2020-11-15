@@ -1,8 +1,8 @@
 ---
-title: 'Figma Design System Primative Pattern Study'
+title: 'Figma Design System Primitive Pattern Study'
 description: ''
 date-created: 2020/11/02
-last-modified: '2020/11/11'
+last-modified: '2020/11/15'
 isdraft: true
 featured_img: ''
 categories: ['design-system']

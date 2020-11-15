@@ -5,22 +5,31 @@
 }
 
 .post {
-  &.card {
-    margin: $space-atom * $sm;
+  display: flex;
+  flex-direction: column;
+
+  &__img {
+    max-height: 375px;
     overflow: hidden;
   }
 
-  &__content {
-    padding: $space-atom * $md;
+  &.card {
+    margin: $space-atom * $sm;
+    overflow: hidden;
+    max-height: 500px;
+    height: 500px;
+    min-width: 100%;
+    flex-basis: 100%;
   }
 
-
-  &.img {
-    .post {
-      &__content {
-        height: 0px;
-      }
-    }
+  &__content {
+    flex-grow: 1;
+    padding: $space-atom * $xs;
+    padding-left: $space-atom * $sm;
+    padding-right: $space-atom * $sm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -43,63 +52,17 @@
     &__container {
       flex-direction: row;
       flex-wrap: wrap;
-
-      &>.post-img {
-        flex-grow: 1;
-        flex-shrink: 1;
-      }
     }
   }
-
-  .post {
-    max-height: 400px;
-    // min-width: 40%;
-    flex-basis: 40%;
-    overflow: hidden;
-
-    &.post-img {
-      width: 100%;
-      flex-basis: 100%;
-      display: flex;
-
-      &:nth-last-of-type(2n) {
-        -ms-flex-direction: row;
-        flex-direction: row;
-      }
-
-      &:nth-last-of-type(2n-1) {
-        -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse;
-      }
-
-      .post {
-        &__img {
-          width: 100%;
-          flex-basis: 100%;
-        }
-      }
-    }
-
-    &.img {
-      // width: 45%;
-      // flex-basis: 45%;
-
-      .post {
-        &__img {
-          img {
-            width: 100%
-          }
-
-          flex-basis: 100%;
-        }
-      }
-    }
-  }
-
 }
 
 // 960px
 @media screen and (min-width: $media-med) {
+  .post.card {
+    min-width: 45%;
+    flex-basis: 45%;
+  }
+
   .feed {
     &__container {
       // display: grid;
@@ -111,84 +74,15 @@
     }
   }
 
-  .post {
-    &.img {
-      .post {
-        &__img {
-          flex-basis: 100%;
 
-          img {
-            margin: auto;
-          }
-        }
-      }
-    }
-
-    &.post-img {
-      width: 100%;
-      flex-basis: 100%;
-      display: flex;
-
-      .post {
-        &__img {
-          flex-basis: 100%;
-
-        }
-      }
-    }
-  }
 
 }
 
 @media screen and (min-width: $media-large) {
-  // .feed {
-  //   &__container {
-  //     display: grid;
-  //     grid-template-columns: 1fr 1fr 1fr 1fr;
-  //     grid-template-rows: 1fr 1fr;
-  //   }
-  // }
-
-  // .post-img {
-  //   &:nth-of-type(2n) {
-  //     grid-column: 1/span 2;
-  //   }
-
-  //   &:nth-of-type(2n-1) {
-  //     grid-column: 3/span 4;
-  //   }
-
-  // }
-  .post {
-    &.img {
-      .post {
-        &__img {
-          flex-basis: 100%;
-
-          img {
-            margin: auto;
-          }
-        }
-      }
-    }
-
-    &.post-img {
-      width: 45%;
-      flex-basis: 45%;
-      display: flex;
-
-      .post {
-        &__img {
-          height: 100%;
-
-          &>div {
-            height: 100%;
-          }
-        }
-      }
-    }
+  .post.card {
+    min-width: 30%;
+    flex-basis: 30%;
   }
-
 
   .container {
     &__content {
@@ -199,38 +93,4 @@
   }
 }
 
-@media screen and (min-width: $media-xlarge) {
-  .post {
-    &.img {
-      flex-basis: 25%;
-
-      .post {
-        &__img {
-          flex-basis: 100%;
-
-          img {
-
-            margin: auto;
-          }
-        }
-      }
-    }
-
-    &.post-img {
-      width: 45%;
-      flex-basis: 45%;
-      display: flex;
-
-      .post {
-        &__img {
-          height: 100%;
-
-          &>div {
-            height: 100%;
-          }
-        }
-      }
-    }
-  }
-
-}
+@media screen and (min-width: $media-xlarge) {}
