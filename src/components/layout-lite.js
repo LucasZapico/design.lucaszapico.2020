@@ -5,16 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useThemeValue } from '../context/index'
+import { useThemeValue, ThemeContext } from '../context/index'
 
 import '../assets/sass/_style.scss'
 
 const LayoutLite = ({ children }) => {
-  const { theme } = useThemeValue()
-  console.log('lya', theme)
+  const { theme, setTheme } = useThemeValue()
+
+  console.log('theme', theme)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,9 +30,9 @@ const LayoutLite = ({ children }) => {
     <>
       <div
         className={
-          theme && theme.isDark
-            ? `container dark`
-            : ' container light'
+          theme && theme.isLight
+            ? ' container light'
+            : `container dark`
         }
       >
         {children}
