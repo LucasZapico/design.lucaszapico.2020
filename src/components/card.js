@@ -4,8 +4,6 @@ import { IoIosArrowForward } from 'react-icons/io'
 import Link from 'gatsby-plugin-transition-link/AniLink'
 
 const Card = ({ post, progress }) => {
-  console.log('test', post.frontmatter.type)
-  console.log('test', post.frontmatter.featured)
   return (
     <div className={`post card `}>
       {post.frontmatter.featured_gif === null ? undefined : (

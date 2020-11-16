@@ -9,7 +9,6 @@ const Footer = () => {
   const handleFormChange = e => {
     const newFormData = formInput
     newFormData[e.target.type] = e.target.value
-    console.log(formInput)
   }
   const handleSubmit = e => {
     e.preventDefault()
@@ -84,7 +83,7 @@ const Footer = () => {
           </div>
           <div>
             {/*  */}
-            Last-Modified: '2020/11/04'
+            Last-Modified: '2020/11/15'
             {/*  */}
           </div>
         </div>
