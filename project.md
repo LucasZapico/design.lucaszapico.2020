@@ -34,6 +34,8 @@
 - [x] seo
 - [x] work with me flow
 - [ ] enhance the content experience
+- [x] Add light dark mode
+  - [ ] enhance light and dark mode to have local storage functionality 
 
 ---
 
