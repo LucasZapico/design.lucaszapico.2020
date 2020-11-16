@@ -56,14 +56,18 @@ const PrimaryNav = () => {
             <div className="nav__items flex items__center">
               <div
                 className={
-                  theme.isDark
+                  theme && theme.isDark
                     ? `theme dark toggle`
                     : `theme light toggle`
                 }
                 onClick={() => setTheme({ isDark: !theme.isDark })}
               >
                 <div></div>
-                {theme.isDark ? <div>Dark</div> : <div>Light</div>}
+                {theme && theme.isDark ? (
+                  <div>Dark</div>
+                ) : (
+                  <div>Light</div>
+                )}
               </div>
               <div className="sidenav__toggle margin__left">
                 {!showMenu ? (

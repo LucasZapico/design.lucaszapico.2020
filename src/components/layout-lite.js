@@ -14,6 +14,7 @@ import '../assets/sass/_style.scss'
 
 const LayoutLite = ({ children }) => {
   const { theme } = useThemeValue()
+  console.log('lya', theme)
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -28,7 +29,9 @@ const LayoutLite = ({ children }) => {
     <>
       <div
         className={
-          theme.isDark ? `container dark` : ' container light'
+          theme && theme.isDark
+            ? `container dark`
+            : ' container light'
         }
       >
         {children}

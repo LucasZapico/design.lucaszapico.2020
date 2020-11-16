@@ -5,7 +5,7 @@ const initTheme = {
   isGeo: false,
 }
 
-export const ThemeContext = createContext()
+export const ThemeContext = createContext(initTheme)
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(initTheme)
   return (
