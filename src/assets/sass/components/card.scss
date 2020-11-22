@@ -31,6 +31,19 @@
   }
 }
 
+.modal {
+  height: 50vh;
+  width: 50vw;
+  z-index: 3;
+  position: fixed;
+
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+
+}
+
 // 700px and up
 @media screen and (min-width: $media-small) {}
 
