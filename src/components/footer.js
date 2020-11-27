@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
           <div>
             {/*  */}
-            Last-Modified: '2020/11/15'
+            Last-Modified: '2020/11/21'
             {/*  */}
           </div>
         </div>
