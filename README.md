@@ -21,6 +21,6 @@ The objective of this project is to showcase design content in a general feed
 - ***
 
 As a creator I want my audience to be able to read more
-As a creator if the content is purely visual I want multipe images
+As a creator if the content is purely visual I want multiple images
 
 -
