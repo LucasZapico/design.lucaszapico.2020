@@ -8,6 +8,7 @@
 import React, { useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
+import Scrollbar from 'react-smooth-scrollbar'
 import { useThemeValue, ThemeContext } from '../context/index'
 
 import '../assets/sass/_style.scss'
@@ -28,16 +29,20 @@ const LayoutLite = ({ children }) => {
 
   return (
     <>
-      <div
-        className={
-          theme && theme.isLight
-            ? ' container light'
-            : `container dark`
-        }
-      >
-        {children}
-      </div>
-      {/* add script tags that need to be at the bottom of body */}
+      <Scrollbar>
+        <div style={{ height: '100vh' }}>
+          <div
+            className={
+              theme && theme.isLight
+                ? ' container light'
+                : `container dark`
+            }
+          >
+            {children}
+          </div>
+        </div>
+        {/* add script tags that need to be at the bottom of body */}
+      </Scrollbar>
     </>
   )
 }
