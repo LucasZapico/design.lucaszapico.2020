@@ -29,6 +29,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     `gatsby-transformer-remark`,
     'gatsby-plugin-sharp',
+    `gatsby-transformer-json`,
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
@@ -68,7 +69,6 @@ module.exports = {
       options: {
         name: `data`,
         path: `${__dirname}/src/data/`,
-        plugins: [`gatsby-transformer-json`],
       },
     },
   ],
